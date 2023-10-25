@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Rocket :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >ID Rocket</label>
+        <input type="text" [(ngModel)]="newrocket.idRocket"
+        name="idRocket" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Rocket</label>
+        <input type="text"[(ngModel)]= "newrocket.nomRocket"
+        name="nomProduit" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Bugdet</label>
+        <input type="number" [(ngModel)]= "newrocket.budgetRocket"
+        name="budgetRocket" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Premier Lancement</label>
+        <input type="date" [(ngModel)]= "newrocket.premierLancement"
+        name="premierLancement" class="form-control">
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addRocket()"class="btn btn-success">Ajouter</button>
+        </div>
+        </form>
+        </div>
