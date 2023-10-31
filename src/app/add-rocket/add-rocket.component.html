@@ -23,8 +23,18 @@
         <input type="date" [(ngModel)]= "newrocket.premierLancement"
         name="premierLancement" class="form-control">
         </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Modele</label>
+            <select class="form-control form-control-lg" id="idMod" name="idMod"
+            [(ngModel)]="newIdMod">
+             <option *ngFor="let mod of modeles" [value]="mod.idMod" >
+             {{mod.nomMod}}
+            </option>
+            </select>
+            </div>
         <div class="mt-2">
         <button type="submit" (click)="addRocket()"class="btn btn-success">Ajouter</button>
         </div>
+        
         </form>
         </div>

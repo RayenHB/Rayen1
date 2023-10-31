@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { rocket } from './model/rocket.model';
+import { modele } from './model/modele.model';
+
+
 
 
 @Injectable({
@@ -7,11 +10,14 @@ import { rocket } from './model/rocket.model';
 })
 export class RocketService {
   rocket : rocket[]; //un tableau de chînes de caractères  
+  modeles : modele[]
   constructor() {
+    this.modeles =  [ {idMod : 1, nomMod : "Falcon 9"},
+                      {idMod : 2, nomMod : "salturn V"}];
     this.rocket = [
-      {idRocket : 1, nomRocket : "Falcon 9", budgetRocket : 10223.600, premierLancement: new Date("04/06/2010")},
-      {idRocket : 2, nomRocket : "Saturn V", budgetRocket : 9999.600, premierLancement: new Date("11/09/1967")},
-      {idRocket : 3, nomRocket : "Atlas V", budgetRocket : 14755.600, premierLancement: new Date("07/21/2022")}
+      {idRocket : 1, nomRocket : "Falcon 9", budgetRocket : 10223.600, premierLancement: new Date("04/06/2010"), modele:{idMod : 1, nomMod : "Falcon 9"}},
+      {idRocket : 2, nomRocket : "Saturn V", budgetRocket : 9999.600, premierLancement: new Date("11/09/1967"), modele:{idMod : 2, nomMod : "salturn V"}},
+      {idRocket : 3, nomRocket : "Atlas V", budgetRocket : 14755.600, premierLancement: new Date("07/21/2022"), modele:{idMod : 1, nomMod : "Falcon 9"}}
        ];
       }
       listeRocket():rocket[] {
@@ -48,8 +54,15 @@ export class RocketService {
   {
     this.supprimerRocket(r);
     this.ajouterRocket(r);
-    this.trierRockets()
+    this.trierRockets();
+    
 }
+  listeModele():modele[] {
+    return this.modeles;
+  }
+  consulterModele(id:number): modele{
+    return this.modeles.find(mod => mod.idMod == id)!;
+    }
 
   
 }
