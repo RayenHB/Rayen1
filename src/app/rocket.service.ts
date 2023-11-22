@@ -12,8 +12,8 @@ export class RocketService {
   rocket : rocket[]; //un tableau de chînes de caractères  
   modeles : modele[]
   constructor() {
-    this.modeles =  [ {idMod : 1, nomMod : "Falcon 9"},
-                      {idMod : 2, nomMod : "salturn V"}];
+    this.modeles =  [ {idMod : 1, nomMod : "Full Thrust"},
+                      {idMod : 2, nomMod : "Small-Scale"}];
     this.rocket = [
       {idRocket : 1, nomRocket : "Falcon 9", budgetRocket : 10223.600, premierLancement: new Date("04/06/2010"), modele:{idMod : 1, nomMod : "Falcon 9"}},
       {idRocket : 2, nomRocket : "Saturn V", budgetRocket : 9999.600, premierLancement: new Date("11/09/1967"), modele:{idMod : 2, nomMod : "salturn V"}},

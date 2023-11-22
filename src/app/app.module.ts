@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { RocketComponent } from './rocket/rocket.component';
 import { AddRocketComponent } from './add-rocket/add-rocket.component';
 import { UpdateRocketComponent } from './update-rocket/update-rocket.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RocketComponent,
     AddRocketComponent,
-    UpdateRocketComponent
+    UpdateRocketComponent,
+    LoginComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,

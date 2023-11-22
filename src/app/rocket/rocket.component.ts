@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { rocket } from '../model/rocket.model';
 import { RocketService } from '../rocket.service';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { RocketService } from '../rocket.service';
 })
 export class RocketComponent {
   rocket : rocket[]; //un tableau de chînes de caractères  
-  constructor(private RocketService : RocketService) {
+  constructor(private RocketService : RocketService,public authService: AuthService) {
     this.rocket = RocketService.listeRocket();
     }
     supprimerRocket(r: rocket)

@@ -10,8 +10,8 @@
     <td>{{rocket.budgetRocket}}</td>
     <td>{{rocket.premierLancement | date:'dd/MM/yyyy'}}</td>
     <td>{{rocket.modele.nomMod}}</td>
-    <td><a class="btn btn-danger" (click)="supprimerRocket(rocket)">Supprimer</a></td>
-    <td><a class="btn btn-success" [routerLink]="['/updateRocket',rocket.idRocket]">Modifier</a></td>
+    <td><a  *ngIf="authService.isAdmin()" class="btn btn-danger" (click)="supprimerRocket(rocket)">Supprimer</a></td>
+    <td><a  *ngIf="authService.isAdmin()" class="btn btn-success" [routerLink]="['/updateRocket',rocket.idRocket]">Modifier</a></td>
     </tr>
     </tbody>
     </table>
