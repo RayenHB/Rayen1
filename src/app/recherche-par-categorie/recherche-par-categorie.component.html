@@ -1,4 +1,13 @@
 <div class="container">
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        <label>Categories </label>
+        <select class="form-control form-control-lg" id="idMod" name="idMod"
+        [(ngModel)]="IdMod" (change)="onChange()">
+        <option *ngFor="let mod of modeles" value="{{mod.idMod}}">
+        {{mod.nomMod}}
+         </option>
+        </select>
+        </div>        
     <div class="card shadow mb-4">
         <div class="card-body">
             <table class="table table-striped">

@@ -1,0 +1,37 @@
+<div class="container">
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+            <label>Nom Produit en tapant</label>
+<input #nom [(ngModel)]="searchTerm" name="searchTerm" class="form-control" >
+
+            <input type="text" class="form-control" [(ngModel)]="nomRocket" name="nomRocket" class="form-control">
+            <button type="submit" (click)="rechercherP()" class="btn btn-primary mb-2 ml-2">Rechercher</button>
+        </div>
+    </form>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom</th>
+                        <th>Budget</th>
+                        <th>Date
+                            premier Lancement</th>
+                        <th>Catégorie</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let rocket of rockets">
+                    Nadhem Bel Hadj- nadhemb@yahoo.com Page 4 Angular 2022
+                    <tr>
+                        <td>{{rocket.idProduit}}</td>
+                        <td>{{rocket.nomProduit}}</td>
+                        <td>{{rocket.prixProduit}}</td>
+                        <td>{{rocket.dateCreation | date:'dd/MM/yyyy'}}</td>
+                        <td>{{rocket.categorie?.nomCat}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

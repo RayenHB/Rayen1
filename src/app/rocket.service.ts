@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { rocket } from './model/rocket.model';
 import { modele } from './model/modele.model';
+import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -64,5 +67,12 @@ export class RocketService {
     return this.modeles.find(mod => mod.idMod == id)!;
     }
 
-  
+    rechercherParModele(idMod: number): Observable<rocket[]> {
+      const rocketsWithModel = this.rocket.filter((r) => r.modele.idMod === idMod);
+      return of(rocketsWithModel);
+    }
+
+    rechercherParNom(nom: string):Observable< rocket[]> {
+      
+      }
 }

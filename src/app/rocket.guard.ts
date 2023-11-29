@@ -14,11 +14,11 @@ export class RocketGuard implements CanActivate {
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot): boolean {
   if (this.authService.isAdmin())
-  return true;
+        return true;
   else
   {
-  this.router.navigate(['app-forbidden']);
-  return false;
+        this.router.navigate(['app-forbidden']);
+        return false;
   }
   }
 }

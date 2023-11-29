@@ -6,15 +6,20 @@ import { UpdateRocketComponent } from './update-rocket/update-rocket.component';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { RocketGuard } from './rocket.guard';
+import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 const routes: Routes = [
   {path: "rocket", component : RocketComponent},
-  {path: "add-rocket", component : AddRocketComponent},
   {path: "", redirectTo: "rocket", pathMatch: "full" },
   {path: "updateRocket/:id", component: UpdateRocketComponent},
   {path: 'login', component: LoginComponent},
   {path: 'app-forbidden', component: ForbiddenComponent},
   {path : "add-rocket", component : AddRocketComponent, canActivate:[RocketGuard]},
+  {path: "rechercheParCategorie", component : RechercheParCategorieComponent},
+  {path: "rechercheParNom", component : RechercheParNomComponent},
+
+
 ];
 
 @NgModule({

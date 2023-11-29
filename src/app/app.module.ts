@@ -9,6 +9,9 @@ import { AddRocketComponent } from './add-rocket/add-rocket.component';
 import { UpdateRocketComponent } from './update-rocket/update-rocket.component';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     AddRocketComponent,
     UpdateRocketComponent,
     LoginComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    RechercheParCategorieComponent,
+    RechercheParNomComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
