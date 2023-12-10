@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { RocketGuard } from './rocket.guard';
 import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
-import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
+import { RechercheParNomComponent } from './recherche-par-nom/RechercheParNomComponent';
 
 const routes: Routes = [
   {path: "rocket", component : RocketComponent},

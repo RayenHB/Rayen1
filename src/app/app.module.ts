@@ -10,8 +10,9 @@ import { UpdateRocketComponent } from './update-rocket/update-rocket.component';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
-import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
+import { RechercheParNomComponent } from './recherche-par-nom/RechercheParNomComponent';
 import { SearchFilterPipe } from './search-filter.pipe';
+
 
 @NgModule({
   declarations: [

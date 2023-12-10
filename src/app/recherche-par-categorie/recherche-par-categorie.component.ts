@@ -10,6 +10,7 @@ import { modele } from '../model/modele.model';
   styleUrls: ['./recherche-par-categorie.component.css']
 })
 export class RechercheParCategorieComponent {
+  modele: any;
   constructor (public authService: AuthService, private RocketService:RocketService) {}
 
   rocket! : rocket[];
@@ -18,14 +19,11 @@ export class RechercheParCategorieComponent {
 
 
   ngOnInit(): void {
-    this.RocketService.listeModele().
-    subscribe((mods: { _embedded: { modeles: modele[]; }; }) => {this.modeles = mods._embedded.modeles;
-    console.log(mods);
-    });
+    this.modeles = this.RocketService.listeModele(); 
+    console.log(this.modeles);
     }
     onChange() {
-      this.RocketService.rechercherParModele(this.IdMod).
-      subscribe((rockts: rocket[]) =>{this.rocket=rockts});
+      this.modele = this.RocketService.rechercherParModele(this.IdMod);
       }
     
 
